@@ -1,4 +1,4 @@
-box: centos:latest
+box: milcom/centos7-systemd
 # This is the build pipeline. Pipelines are the core of wercker
 # Read more about pipelines on our dev center
 # http://devcenter.wercker.com/docs/pipelines/index.html
@@ -15,8 +15,6 @@ build:
           #pip install ansible==1.9.4
           yum install -y ansible
           yum clean all 
-          yum -y swap -- remove systemd-container -- install systemd systemd-libs
-          rpm -qa | grep systemd
           sudo sed -i 's/requiretty/!requiretty/g' /etc/sudoers
           free -m
           lscpu
