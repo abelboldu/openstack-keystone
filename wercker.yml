@@ -1,4 +1,4 @@
-box: centos
+box: centos:latest
 # This is the build pipeline. Pipelines are the core of wercker
 # Read more about pipelines on our dev center
 # http://devcenter.wercker.com/docs/pipelines/index.html
@@ -14,6 +14,9 @@ build:
           #yum install python-pip python-devel gcc -y
           #pip install ansible==1.9.4
           yum install -y ansible
+          yum clean all 
+          yum swap fakesystemd systemd
+          rpm -qa | grep systemd
           sudo sed -i 's/requiretty/!requiretty/g' /etc/sudoers
           free -m
           lscpu
