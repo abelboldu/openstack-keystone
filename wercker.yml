@@ -11,8 +11,9 @@ build:
         name: setup
         code: |
           yum install epel-release sudo -y
-          yum install python-pip python-devel gcc -y
-          pip install ansible==1.9.4
+          #yum install python-pip python-devel gcc -y
+          #pip install ansible==1.9.4
+          yum install -y ansible
           sudo sed -i 's/requiretty/!requiretty/g' /etc/sudoers
           free -m
           lscpu
