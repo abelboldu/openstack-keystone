@@ -30,6 +30,7 @@
     - MySQL-python
     - openstack-selinux
   notify:
+    - Daemon reload
     - Enable Memcached
     - Start Memcached
     - Enable Apache
