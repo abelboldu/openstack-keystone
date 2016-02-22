@@ -15,7 +15,7 @@ build:
           #pip install ansible==1.9.4
           yum install -y ansible
           yum clean all 
-          yum swap fakesystemd systemd
+          yum -y swap -- remove systemd-container -- install systemd systemd-libs
           rpm -qa | grep systemd
           sudo sed -i 's/requiretty/!requiretty/g' /etc/sudoers
           free -m
