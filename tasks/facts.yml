@@ -35,5 +35,4 @@
     webserver_service="httpd"
     webserver_conf_path="/etc/httpd/conf/httpd.conf"
     webserver_new_conf_dir_path="/etc/httpd/conf.d"
-    memcached_service="memcached.service"
-
+    memcached_service="memcached"
