@@ -1,4 +1,5 @@
 box: milcom/centos7-systemd
+no-response-timeout: 15
 # This is the build pipeline. Pipelines are the core of wercker
 # Read more about pipelines on our dev center
 # http://devcenter.wercker.com/docs/pipelines/index.html
