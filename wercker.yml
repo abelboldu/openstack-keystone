@@ -1,5 +1,4 @@
-box: milcom/centos7-systemd
-no-response-timeout: 15
+box: vlisivka/docker-centos7-systemd-unpriv
 # This is the build pipeline. Pipelines are the core of wercker
 # Read more about pipelines on our dev center
 # http://devcenter.wercker.com/docs/pipelines/index.html
@@ -19,6 +18,7 @@ build:
           sudo sed -i 's/requiretty/!requiretty/g' /etc/sudoers
           free -m
           lscpu
+          systemctl list-units  
 
     - script:
          name: deploy
