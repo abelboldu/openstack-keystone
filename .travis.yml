@@ -24,7 +24,6 @@ services:
 
 sudo: 'required'
 
-
 before_install:
   - >-
     docker build
@@ -46,6 +45,11 @@ install:
 
 script:
   - 'yamllint -c .yamllint.conf .'
+
+  # Ansible install requirements.
+  - >-
+    docker exec container ansible-galaxy install -r
+    /etc/ansible/roles/openstack-keystone/tests/requirements.yml
 
   # Ansible syntax check.
   - >-
