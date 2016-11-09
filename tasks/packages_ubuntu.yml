@@ -29,4 +29,5 @@
     - 'python-keystoneclient'
     - 'python-memcache'
     - 'python-mysqldb'
+    - 'python-pymysql'
     - 'python-openstackclient'
