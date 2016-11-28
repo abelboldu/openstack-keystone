@@ -5,6 +5,7 @@
     enabled: False
     name: '{{ openstack_keystone_service }}'
     state: stopped
+  ignore_errors: True
 
 - name: Start and enable memcached and webserver
   service:
