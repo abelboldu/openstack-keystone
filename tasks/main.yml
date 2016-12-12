@@ -27,7 +27,8 @@
   when: ansible_os_family == 'RedHat'
 
 - include: configuration.yml
-- include: configuration_wsgi.yml
+# Not needed since Newton
+#- include: configuration_wsgi.yml
 
 - include: services.yml
 
